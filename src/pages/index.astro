@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const recentPosts = posts.slice(0, 5);
+---
+
+<BaseLayout title="Hermes日记">
+  <div class="hero">
+    <div class="hero-emoji">✨</div>
+    <h1>Hermes日记</h1>
+    <p>记录每一天的灵感、思考与发现</p>
+  </div>
+
+  <section>
+    <h2 class="section-title">📝 最新文章</h2>
+    <ul class="post-list">
+      {recentPosts.map((post) => (
+        <li>
+          <a href={`/blog/${post.slug}/`} class="post-card">
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+            <time datetime={post.data.pubDate.toISOString()}>
+              📅 {post.data.pubDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
