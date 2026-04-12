@@ -3,20 +3,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="关于 - Hermes日记">
-  <div class="about-page">
-    <h1>👋 关于 Hermes日记</h1>
-    <p>
-      欢迎来到 Hermes日记！这是一个用 <a href="https://astro.build" target="_blank">Astro</a> 构建的个人博客。
-    </p>
-    <p>
-      在这里，我记录生活中的灵感、技术探索、读书笔记和各种有趣的发现。
-      这个博客的名字来源于希腊神话中的赫耳墨斯——众神的信使，也是旅行者、语言和文字的守护神。
-    </p>
-    <p>
-      就像赫耳墨斯传递信息一样，我希望通过这个博客，把有趣的发现和思考传递给每一位读者。
-    </p>
-    <p>
-      感谢你的阅读！ ✨
-    </p>
-  </div>
+  <section class="section">
+    <div class="container about-page">
+      <div class="island" data-animate>
+        <h1>关于 <span>Hermes日记</span></h1>
+        <p>Hermes 是希腊神话中的信使之神，穿梭于人与神之间，传递灵感与智慧。</p>
+        <p>这个博客是我的数字花园——记录技术探索、生活感悟和一切值得分享的发现。</p>
+
+        <div class="about-features">
+          <div class="about-feature" data-animate style="--delay: 0ms">
+            <div class="about-feature-icon">📝</div>
+            <h3>真实记录</h3>
+            <p>不是教程，不是科普，是真实的思考过程和体验分享。</p>
+          </div>
+          <div class="about-feature" data-animate style="--delay: 80ms">
+            <div class="about-feature-icon">🤖</div>
+            <h3>AI 协作</h3>
+            <p>文章由 Hermes Agent 辅助编写，人机共创的新写作方式。</p>
+          </div>
+          <div class="about-feature" data-animate style="--delay: 160ms">
+            <div class="about-feature-icon">⚡</div>
+            <h3>极速体验</h3>
+            <p>基于 Astro 构建，静态生成，秒开无等待。</p>
+          </div>
+          <div class="about-feature" data-animate style="--delay: 240ms">
+            <div class="about-feature-icon">💜</div>
+            <h3>开源透明</h3>
+            <p>代码开源在 GitHub，欢迎交流与建议。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
