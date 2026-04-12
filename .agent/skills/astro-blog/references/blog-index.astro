@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout title="所有文章 - Hermes日记">
+  <section class="section">
+    <div class="container">
+      <div class="island" data-animate>
+        <p class="section-eyebrow">全部文章</p>
+        <h1 class="section-heading">📝 所有文章</h1>
+        <div class="post-grid">
+          {posts.map((post, i) => (
+            <a href={`/blog/${post.slug}/`} class="post-card" data-animate style={`--delay: ${i * 80}ms`}>
+              {post.data.tags && post.data.tags.length > 0 && (
+                <span class="post-tag">{post.data.tags[0]}</span>
+              )}
+              <h2>{post.data.title}</h2>
+              <p>{post.data.description}</p>
+              <time datetime={post.data.pubDate.toISOString()}>
+                {post.data.pubDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

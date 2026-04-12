@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const recentPosts = posts.slice(0, 5);
+---
+
+<BaseLayout title="Hermes日记">
+  <!-- Hero Section -->
+  <section class="hero section">
+    <div class="container">
+      <div class="island" data-animate>
+        <!-- Animated gradient orbs -->
+        <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+
+        <span class="hero-emoji">✨</span>
+        <h1>Hermes<span>日记</span></h1>
+        <p class="hero-desc">记录每一天的灵感、思考与发现</p>
+        <div class="hero-actions" data-animate>
+          <a href="/blog" class="btn btn--primary">浏览文章</a>
+          <a href="/about" class="btn btn--ghost">了解更多</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Posts -->
+  <section class="section">
+    <div class="container">
+      <div class="island" data-animate>
+        <p class="section-eyebrow">最新发布</p>
+        <h2 class="section-heading">📝 最新文章</h2>
+        <div class="post-grid">
+          {recentPosts.map((post, i) => (
+            <a href={`/blog/${post.slug}/`} class="post-card" data-animate style={`--delay: ${i * 80}ms`}>
+              {post.data.tags && post.data.tags.length > 0 && (
+                <span class="post-tag">{post.data.tags[0]}</span>
+              )}
+              <h2>{post.data.title}</h2>
+              <p>{post.data.description}</p>
+              <time datetime={post.data.pubDate.toISOString()}>
+                {post.data.pubDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

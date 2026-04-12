@@ -1,0 +1,49 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate?: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+}
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container section">
+    <article class="blog-post">
+      <div class="island" data-animate>
+        <a href="/blog" class="back-link">← 返回文章列表</a>
+
+        <div class="blog-post-header">
+          <h1>{title}</h1>
+          <div class="blog-post-meta">
+            {pubDate && (
+              <time datetime={pubDate.toISOString()}>
+                📅 {pubDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            )}
+            {updatedDate && (
+              <span>
+                · 更新于 <time datetime={updatedDate.toISOString()}>
+                  {updatedDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </span>
+            )}
+          </div>
+        </div>
+
+        {heroImage && (
+          <img src={heroImage} alt={title} style="border-radius: var(--radius-md); margin-bottom: 32px;" />
+        )}
+
+        <div class="blog-post-content">
+          <slot />
+        </div>
+      </div>
+    </article>
+  </div>
+</BaseLayout>
