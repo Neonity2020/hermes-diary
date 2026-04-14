@@ -145,12 +145,8 @@ img {
 .navbar .logo-icon {
   width: 32px;
   height: 32px;
-  background: var(--primary);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .nav-links {
@@ -289,10 +285,14 @@ img {
   50% { transform: translate(20px, -30px); }
 }
 
-.hero-emoji {
-  font-size: 48px;
-  margin-bottom: 20px;
+.hero-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin: 0 auto 24px;
   display: block;
+  box-shadow: var(--shadow-md);
 }
 
 .hero h1 {
