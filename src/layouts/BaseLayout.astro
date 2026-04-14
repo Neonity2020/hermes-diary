@@ -99,7 +99,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             entry.target.classList.add('visible');
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0 });
       document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
     </script>
   </body>
