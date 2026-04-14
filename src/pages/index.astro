@@ -38,14 +38,21 @@ const recentPosts = posts.slice(0, 5);
         <div class="post-grid">
           {recentPosts.map((post, i) => (
             <a href={`/blog/${post.slug}/`} class="post-card" data-animate style={`--delay: ${i * 80}ms`}>
-              {post.data.tags && post.data.tags.length > 0 && (
-                <span class="post-tag">{post.data.tags[0]}</span>
+              {post.data.heroImage && (
+                <div class="post-card-image">
+                  <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
+                </div>
               )}
-              <h2>{post.data.title}</h2>
-              <p>{post.data.description}</p>
-              <time datetime={post.data.pubDate.toISOString()}>
-                {post.data.pubDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
-              </time>
+              <div class="post-card-body">
+                {post.data.tags && post.data.tags.length > 0 && (
+                  <span class="post-tag">{post.data.tags[0]}</span>
+                )}
+                <h2>{post.data.title}</h2>
+                <p>{post.data.description}</p>
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {post.data.pubDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </div>
             </a>
           ))}
         </div>

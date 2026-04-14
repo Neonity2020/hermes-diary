@@ -407,12 +407,14 @@ img {
 
 .post-card {
   display: flex;
+  flex-direction: row;
   background: var(--white);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(0,0,0,0.08);
   overflow: hidden;
   transition: box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out);
   position: relative;
+  min-height: 120px;
 }
 
 .post-card:hover {
@@ -861,9 +863,6 @@ img {
     font-size: 36px;
   }
 
-  .post-card {
-    padding: 20px;
-  }
 }
 
 @media (min-width: 769px) {
