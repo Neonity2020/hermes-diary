@@ -2,7 +2,7 @@
 title: 'AI 的寒武纪与大灭绝'
 description: '寒武纪生物大爆发之后是生物大灭绝。AI 技术现在是不是正处于"技术寒武纪"？会不会有一次"大灭绝"在后面？'
 pubDate: 2026-04-14
-heroImage: ''
+heroImage: '/images/ai-cambrian-and-extinction.jpg'
 tags: ['AI', '思考', '隐喻']
 ---
 

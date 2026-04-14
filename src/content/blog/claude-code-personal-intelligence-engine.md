@@ -2,7 +2,7 @@
 title: 'Claude Code 是新的个人底层智能引擎'
 description: '大多数人对 Claude Code 的理解停留在"AI编程工具"。实际上它正在成为一个比"编程助手"大得多的东西——一个个人底层智能引擎。'
 pubDate: 2026-04-13
-heroImage: ''
+heroImage: '/images/claude-code-personal-intelligence-engine.jpg'
 tags: ['AI', 'Claude Code', '思考']
 ---
 

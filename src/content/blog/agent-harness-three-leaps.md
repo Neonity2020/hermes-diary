@@ -2,7 +2,7 @@
 title: 'Agent Harness 的三次跃迁'
 description: '从 Claude Code 到 OpenClaw 到 Hermes Agent——Agent Harness 的三次代际跃迁，是同一个设计思想在不同维度的展开。'
 pubDate: 2026-04-14
-heroImage: ''
+heroImage: '/images/agent-harness-three-leaps.jpg'
 tags: ['AI', 'Hermes Agent', 'Claude Code', '架构']
 ---
 

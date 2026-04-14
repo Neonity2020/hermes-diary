@@ -2,7 +2,7 @@
 title: 'Hermes Agent 生命隐喻'
 description: '如果把Hermes Agent看作一个生命体，它的对话循环是心跳，工具是器官，记忆是海马体——一次完整的生命隐喻拆解。'
 pubDate: 2026-04-12
-heroImage: ''
+heroImage: '/images/hermes-agent-life-metaphor.jpg'
 tags: ['AI', 'Hermes Agent', '隐喻']
 ---
 

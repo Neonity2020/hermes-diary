@@ -2,7 +2,7 @@
 title: 'Hermes Agent：一个会生长的 AI Agent'
 description: '2026年，Nous Research发布了Hermes Agent。它提出了一个被大多数人忽略的问题：为什么我们的AI助手每次对话都要从零开始？'
 pubDate: 2026-04-12
-heroImage: ''
+heroImage: '/images/hermes-agent-intro.jpg'
 tags: ['AI', 'Hermes Agent', '产品分析']
 ---
 
