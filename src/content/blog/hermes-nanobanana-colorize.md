@@ -10,6 +10,10 @@ tags: ['AI', 'Hermes Agent', '图像生成', 'nanobanana']
 
 这是 Hermes Agent 最近完成的一次工作流实验——用户提供一张黑白线稿头像，Hermes 自动调用 nanobanana 图像生成服务，输出四种截然不同风格的彩色版本。
 
+![黑白线稿原图](/images/hermes_agent_logo.jpg)
+
+Hermes 调用服务后生成的四种风格：
+
 ![四种风格上色结果](/images/hermes-nanobanana-colorize.jpg)
 
 四格图从左上角顺时针分别是：
