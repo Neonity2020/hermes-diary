@@ -2,7 +2,7 @@
 title: 'Vibe Coding 与 Agentic Engineering：软件工程正在从"写代码"变成"驾驭系统"'
 description: '当代码生成成本趋近于零，软件工程的核心正在从"写代码"转向"驾驭生成"。从 Vibe Coding 到 Agentic Engineering，一个新的能力模型正在出现。'
 pubDate: 2026-05-09
-heroImage: ''
+heroImage: '/images/vibe-coding-agentic-engineering.jpg'
 tags: ['AI', 'Agent', 'Vibe Coding', '软件工程', '思考']
 ---
 
